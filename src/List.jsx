@@ -16,19 +16,25 @@ const List = () => {
       <div className="listBody">
         {contactList.map((contact) => (
           <div key={contact.id} className="listItem">
-            <p className="gender">{contact.gender}</p>
-            <p className="name">
-              {contact.first_name} {contact.last_name}
-            </p>
-            <p className="user">{contact.username}</p>
-            <p className="email">{contact.email}</p>
-            <input
-              className="title"
-              type="text"
-              value={contact.employment.title}
-              disabled
-            ></input>
-            {/*  <p className="title">{contact.employment.title}</p> */}
+            <div className="itemInfo">
+              <p className="id">#{contact.id}</p>
+              <p className="name">
+                {contact.first_name} {contact.last_name}
+              </p>
+              <p className="user">{contact.username}</p>
+              <p className="email">{contact.email}</p>
+              <input
+                className="title"
+                type="text"
+                value={contact.employment.title}
+                disabled
+              ></input>
+            </div>
+            <div className="itemExtended">
+              <p>asdasd</p>
+              <p>asdasd</p>
+              <p>asdasd</p>
+            </div>
           </div>
         ))}
       </div>
