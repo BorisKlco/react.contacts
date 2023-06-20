@@ -32,9 +32,18 @@ header h1:hover {
     filter: drop-shadow(0 0 0.25rem white);
 }
 
+.hover {
+    text-align: center;
+    margin:1rem auto;
+    font-size: 2.5rem;
+    font-weight: 700;
+
+}
+
+
 .listContainer {
     background-color: bisque;
-    padding: 6rem;
+    padding: 2rem;
 }
 
 .listBody {
@@ -44,7 +53,8 @@ header h1:hover {
     width: 60rem;
     margin:auto;
     padding:1rem 0;
-    background-color: blueviolet;
+    background-color: #861657;
+    background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);
     border-radius: 1rem;
 }
 
@@ -63,7 +73,8 @@ header h1:hover {
     align-items: center;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem 0.25rem 0 0;
-    background-color: lightgreen;
+    background-color: #f6ecc4;
+    background-image: linear-gradient(315deg, #f6ecc4 0%, #f7d4d4 74%);
 }
 
 .id {
@@ -93,11 +104,20 @@ header h1:hover {
 
 .itemExtended {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: lightgrey;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    background-color: #f6ecc4;
+    background-image: linear-gradient(315deg, #f6ecc4 0%, #f7d4d4 74%);
     margin-bottom: 0.33rem;
-    height: 25rem;
-  /*  overflow: hidden; */
+    max-height: 25rem;
+    overflow: hidden;
+}
+
+.itemExtended p {
+    font-weight: 700;
+}
+
+.itemExtended p span {
+    font-weight: 400;
 }
 
 .left {
@@ -110,7 +130,7 @@ header h1:hover {
 .left img {
     border-radius: 50%;
     width: 75%;
-    filter: drop-shadow(0 0 0.1rem black);
+    filter: drop-shadow(0 0 0.25rem #3333);
     background-color: var(--imgColor)
 }
 
@@ -138,4 +158,68 @@ header h1:hover {
 
 .left h3 {
     font-family: 'Diphylleia', serif;
+    text-align: center;
+    max-width: 18rem;
+}
+
+.padding {
+    padding-bottom: 1rem;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    padding-top:2rem;
+}
+
+.right {
+    outline: 0.1rem solid #3333;
+    box-shadow: 0 0 1rem -0.5rem black;
+    border-radius: 0.5rem;
+    margin:1.5rem 0.5rem;
+    padding:0.5rem;
+}
+
+.right[data-rank="gold"] {
+    background: #D4AF37;
+    background: linear-gradient(to bottom, #D4AF37 0%, #C5A028 100%);
+}
+.right[data-rank="bronze"] {
+    background: #CD7F32;
+    background: linear-gradient(to bottom, #CD7F32 0%, #BE7023 100%);
+}
+.right[data-rank="starter"] {
+    background-color: #94c997;
+    background-image: linear-gradient(315deg, #94c997 0%, #daacec 74%);
+}
+.right[data-rank="professional"] {
+    background-color: #9e8fb2;
+    background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);;
+}
+
+.right[data-rank="dia"] {
+    background-color: #f8f9d2;
+    background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+}
+.right[data-rank="silver"] {
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+}
+.right[data-rank="others"] {
+    background-color: #36669d;
+    background-image: linear-gradient(315deg, #36669d 0%, #d3d3d3 74%);
+
+}
+
+.right:hover {
+    filter: contrast(200%);
+    box-shadow: 0 0 1rem -0.25rem black;
+    transition-duration: 0.3s;
+}
+
+.right div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
