@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+
 
 *{
     margin:0;
@@ -64,13 +66,6 @@ header h1:hover {
     background-color: lightgreen;
 }
 
-.itemExtended {
-    background-color: lightgrey;
-    margin-bottom: 0.33rem;
-    overflow: hidden;
-}
-
-
 .id {
     font-weight: 700;
     width: 5ch;
@@ -91,9 +86,56 @@ header h1:hover {
     width: 16rem;
 }
 
-
-
 .title {
     width: 13rem;
     white-space: nowrap;
+}
+
+.itemExtended {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: lightgrey;
+    margin-bottom: 0.33rem;
+    height: 25rem;
+  /*  overflow: hidden; */
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left img {
+    border-radius: 50%;
+    width: 75%;
+    filter: drop-shadow(0 0 0.1rem black);
+    background-color: var(--imgColor)
+}
+
+.left img[data-color="green"] {
+    --imgColor: lightgreen;
+}
+.left img[data-color="yellow"] {
+    --imgColor: lightyellow;
+}
+.left img[data-color="blue"] {
+    --imgColor: lightskyblue;
+}
+.left img[data-color="red"] {
+    --imgColor: lightcoral;
+}
+
+.left h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+.left span {
+    display: block;
+}
+
+.left h3 {
+    font-family: 'Diphylleia', serif;
 }
